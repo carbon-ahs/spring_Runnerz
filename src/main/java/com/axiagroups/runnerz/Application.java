@@ -19,10 +19,8 @@ public class Application {
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
-		// 00.48.35
+		// 01.43.05
 		SpringApplication.run(Application.class, args);
-
-		log.info("Hello spring");
 
 	}
 
