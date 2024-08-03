@@ -8,15 +8,15 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1/runs")
-public class RunController {
+@RequestMapping("/run")
+public class RunControllerPitfall {
     private final RunRepository runRepository;
 
-    public RunController(RunRepository runRepository) {
+    public RunControllerPitfall(RunRepository runRepository) {
         this.runRepository = runRepository;
     }
 
-    @GetMapping("")
+    @GetMapping("getRun/")
     List<Run> home() {
         return runRepository.findAll();
     }
@@ -48,5 +48,4 @@ public class RunController {
     void delete(@PathVariable Integer id) {
         runRepository.delete(id);
     }
-
 }
